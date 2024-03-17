@@ -3,12 +3,14 @@ import { createServer } from 'http';
 import { graphqlHTTP } from 'express-graphql';
 import expressPlayground from 'graphql-playground-middleware-express';
 import jwt from 'jsonwebtoken';
+import cors from "cors";
 import schema from './graphql/schemas/spacexLaunch.schema';
 import resolvers from './graphql/resolvers/spacexLaunch.resolver';
 import SpaceXAPI from './graphql/sources/spacexLaunch.source';
 import userRoutes from "./rest/routes/users.route"
 
 const app = express();
+app.use(cors());
 const httpServer = createServer(app); // Create an HTTP server
 const secretKey = 'your-secret-key';
 
@@ -47,6 +49,7 @@ app.get("/bla", (req, res) => {
   res.send('GET request to the homepage bn')
   console.log("call done")
 })
+
 
 const port = 3000;
 

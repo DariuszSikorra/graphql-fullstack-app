@@ -7,7 +7,7 @@ const StyledNavigation = styled.nav`
   z-index: 999;
   display: flex;
   flex-direction: column;
-  right: ${theme.spacing(2)};
+  right: 0;
   height: 100vh;
   justify-content: center;
 `;
