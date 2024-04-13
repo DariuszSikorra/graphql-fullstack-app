@@ -6,6 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 const StyledMainBox = styled(Box)`
   background: ${theme.palette.background.default};
+  position: relative;
 `;
 
 
@@ -14,7 +15,7 @@ const StyledContainerBox = styled(Box)`
   border: 1px solid red;
 `;
 
-const SectionContainer = ({ children }: { children: ReactNode }) => {
+const SectionWrapper = ({ children }: { children: ReactNode }) => {
   const bgPoints = {
     startingPoint:
       "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, rgb(251, 140, 0) 40%)",
@@ -65,4 +66,4 @@ const SectionContainer = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default SectionContainer;
+export default SectionWrapper;

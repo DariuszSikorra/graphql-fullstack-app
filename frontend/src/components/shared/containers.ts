@@ -1,7 +1,7 @@
 import theme from "@/theme";
 import { Grid, Paper, styled } from "@mui/material";
 
-export const Section = styled(Grid)`
+export const SectionContainer = styled(Grid)`
   display: flex;
   flex-grow: 1;
   padding-top: 20%;
@@ -9,7 +9,7 @@ export const Section = styled(Grid)`
   flex-wrap: wrap;
 `;
 
-export const Title = styled(Paper)`
+export const TitleContainer = styled(Paper)`
   background-color: ${theme.palette.background.paper};
   color: white;
   justify-content: center;

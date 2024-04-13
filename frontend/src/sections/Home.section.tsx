@@ -1,10 +1,10 @@
-import { Section, Title } from "@/components/shared/Containers";
+import { SectionContainer, TitleContainer } from "@/components/shared/Containers";
 import theme from "@/theme";
 import { Grid, Paper, Typography, styled } from "@mui/material";
-import SectionContainer from "components/shared/SectionContainer";
+import SectionWrapper from "components/shared/SectionContainer";
 import React from "react";
 
-const StyledSection = styled(Section)`
+const StyledSection = styled(SectionContainer)`
   padding-top: 10%;
 `;
 
@@ -27,15 +27,13 @@ const StyledTitleGrid = styled(Grid)`
 
 const Home: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionWrapper>
       <StyledSection container>
         <StyledPhotoGrid xs={12} sm={6} item>
           <StyledPhoto elevation={13} />
         </StyledPhotoGrid>
         <StyledTitleGrid xs={12} sm={6} item>
-          <Title
-            variant="outlined"
-          >
+          <TitleContainer variant="outlined">
             <Grid component="div">
               <Typography component="h1" variant="h3" align="center">
                 Dariusz Sikorra
@@ -45,10 +43,10 @@ const Home: React.FC = () => {
                 Fullstack Engineer
               </Typography>
             </Grid>
-          </Title>
+          </TitleContainer>
         </StyledTitleGrid>
       </StyledSection>
-    </SectionContainer>
+    </SectionWrapper>
   );
 };
 

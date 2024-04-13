@@ -1,13 +1,21 @@
-import SectionContainer from "components/shared/SectionContainer";
+import TechnologyTable from "@/components/Technologies/TechnologyTable";
+import { SectionContainer } from "@/components/shared/Containers";
+import { styled } from "@mui/material";
+import SectionWrapper from "components/shared/SectionContainer";
 import React from "react";
+
+const StyledSection = styled(SectionContainer)`
+  padding-top: 10%;
+  justify-content: center;
+`;
 
 const Technologies: React.FC = () => {
   return (
-    <SectionContainer>
-      <div style={{ border: "1px solid red", width: "100%", height: "100%" }}>
-      Technologies
-      </div>
-    </SectionContainer>
+    <SectionWrapper>
+      <StyledSection>
+        <TechnologyTable />
+      </StyledSection>
+    </SectionWrapper>
   );
 };
 

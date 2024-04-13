@@ -1,20 +1,22 @@
-import { Section, Title } from "@/components/shared/Containers";
+import { SectionContainer, TitleContainer } from "@/components/shared/Containers";
+import Title from "@/components/shared/Title";
 import { Typography, styled } from "@mui/material";
-import SectionContainer from "components/shared/SectionContainer";
+import SectionWrapper from "components/shared/SectionContainer";
 import React from "react";
 
-const StyledSection = styled(Section)`
+const StyledSection = styled(SectionContainer)`
   padding-top: 20%;
 `;
 
-const StyledTitlePaper = styled(Title)`
+const StyledTitlePaper = styled(TitleContainer)`
   width: 60%;
   margin: auto;
 `;
 
 const Summary: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionWrapper>
+      <Title text="Summary" />
       <StyledSection>
         <StyledTitlePaper
           variant="outlined"
@@ -28,7 +30,7 @@ const Summary: React.FC = () => {
           </Typography>
         </StyledTitlePaper>
       </StyledSection>
-    </SectionContainer>
+    </SectionWrapper>
   );
 };
 
