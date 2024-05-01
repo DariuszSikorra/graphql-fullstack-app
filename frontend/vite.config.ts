@@ -12,6 +12,5 @@ export default defineConfig({
       'routes': path.resolve(__dirname, 'src/routes'),
       'helpers': path.resolve(__dirname, 'src/helpers'),
     },
-  },
-  base: "/"
+  }
 })
