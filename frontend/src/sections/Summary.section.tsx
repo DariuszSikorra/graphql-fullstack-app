@@ -1,4 +1,4 @@
-import { SectionContainer, TitleContainer } from "@/components/shared/Containers";
+import { SectionContainer, TitleContainer } from "components/shared/containers";
 import Title from "@/components/shared/Title";
 import { Typography, styled } from "@mui/material";
 import SectionWrapper from "components/shared/SectionContainer";

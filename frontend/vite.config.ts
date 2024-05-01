@@ -13,4 +13,5 @@ export default defineConfig({
       'helpers': path.resolve(__dirname, 'src/helpers'),
     },
   },
+  base: "/"
 })

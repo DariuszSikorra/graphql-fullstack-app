@@ -1,5 +1,5 @@
 import TechnologyTable from "@/components/Technologies/TechnologyTable";
-import { SectionContainer } from "@/components/shared/Containers";
+import { SectionContainer } from "components/shared/containers";
 import { styled } from "@mui/material";
 import SectionWrapper from "components/shared/SectionContainer";
 import React from "react";
