@@ -5,22 +5,21 @@ import { ReactNode } from "react";
 import { useSpring, animated } from "react-spring";
 
 const StyledMainBox = styled(Box)`
-  background: ${theme.palette.background.default};
+  background: #212121;
   position: relative;
 `;
 
 
 const StyledContainerBox = styled(Box)`
   min-height: 100vh;
-  border: 1px solid red;
 `;
 
 const SectionWrapper = ({ children }: { children: ReactNode }) => {
   const bgPoints = {
     startingPoint:
-      "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, rgb(251, 140, 0) 40%)",
+      "linear-gradient(-35deg, #212121 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, #212121 40%)",
     endingPoint:
-      "linear-gradient(-35deg, black 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, rgb(251, 140, 0) 40.5%)",
+      "linear-gradient(-35deg, #212121 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, #212121 40.5%)",
   };
   const props = useSpring({
     opacity: 1,
@@ -37,9 +36,10 @@ const SectionWrapper = ({ children }: { children: ReactNode }) => {
   const bgAnimation = useSpring({
     from: {
       background: bgPoints.startingPoint,
-      backgroundSize: "auto",
+      backgroundSize: "cover",
       backgroundAttachment: "fixed",
       backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
     },
     to: async (next) => {
       // eslint-disable-next-line no-constant-condition
